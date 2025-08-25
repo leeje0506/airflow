@@ -13,7 +13,7 @@ from airflow.operators.empty import EmptyOperator
 with DAG(
     dag_id="dags_bash_operator", # airflow에 뜨는 이름, 이거랑 파일이름 맞추기 권장
     schedule="0 0 * * *",
-    start_date=pendulum.datetime(2021, 1, 1, tz="Asia/seoul"), # UTC는 글로벌, Asia/seoul
+    start_date=pendulum.datetime(2021, 1, 1, tz="UTC"), # UTC는 글로벌, Asia/seoul
     catchup=False, # True : 현재 일자랑 start_date 사이의 모든 날짜를 실행해버림
     dagrun_timeout=datetime.timedelta(minutes=60),
     tags=["example", "example2"], # 옵션
