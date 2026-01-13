@@ -19,10 +19,18 @@ with DAG(
     #     html_content="Airflow 작업이 완료되었습니다."
     # )
 
+    # send_email_task = EmailOperator(
+    #     task_id= "send_email_task",
+    #     conn_id="conn_smtp_gmail",
+    #     to="cullen2227@naver.com",
+    #     subject="살다가 한번쯤은",
+    #     html_content="주위 사람들에게 행운의 편지를 보내보는 것은 어떨까요? "
+    # )
+
     send_email_task = EmailOperator(
         task_id= "send_email_task",
         conn_id="conn_smtp_gmail",
-        to="cullen2227@naver.com",
-        subject="살다가 한번쯤은",
-        html_content="주위 사람들에게 행운의 편지를 보내보는 것은 어떨까요? "
+        to="ps.gksmf.mo@gmail.com",
+        subject="큰일났습니다",
+        html_content="뻥입니다"
     )
