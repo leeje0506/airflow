@@ -2,7 +2,7 @@ from airflow.sdk import DAG, task
 import pendulum
 
 from airflow.operators.python import PythonOperator
-from common.common.common_func import regist
+from common.common_func import regist
 
 with DAG(
     dag_id="dags_python_with_op_args", # airflow에 뜨는 이름, 이거랑 파일이름 맞추기 권장
