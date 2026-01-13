@@ -18,3 +18,9 @@ with DAG(
     )
 
     regist_t1
+
+    # @task(task_id="regist_t1")
+    # def run(*op_args):
+    #     regist(*op_args)
+    #
+    # regist_t1 = run(['aaa', 'man', 'kr', 'seoul'])

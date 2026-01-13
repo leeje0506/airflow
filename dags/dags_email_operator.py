@@ -11,10 +11,18 @@ with DAG(
     start_date=pendulum.datetime(2025, 12, 31, tz="Asia/Seoul"), # UTC는 글로벌, Asia/Seoul
     catchup=False, # True : 현재 일자랑 start_date 사이의 모든 날짜를 실행해버림
 ) as dag:
+    # send_email_task = EmailOperator(
+    #     task_id= "send_email_task",
+    #     conn_id="conn_smtp_gmail",
+    #     to="ju3391@naver.com",
+    #     subject="Airflow 성공메일",
+    #     html_content="Airflow 작업이 완료되었습니다."
+    # )
+
     send_email_task = EmailOperator(
         task_id= "send_email_task",
         conn_id="conn_smtp_gmail",
-        to="ju3391@naver.com",
-        subject="Airflow 성공메일",
-        html_content="Airflow 작업이 완료되었습니다."
+        to="cullen2227@naver.com",
+        subject="살다가 한번쯤은",
+        html_content="주위 사람들에게 행운의 편지를 보내보는 것은 어떨까요? "
     )
