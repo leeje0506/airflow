@@ -11,4 +11,4 @@ with DAG(
     def print_context(some_input):
         print(some_input)
 
-    python_task_1 = print("task_decorator 실행")
+    python_task_1 = print_context("task_decorator 실행")
